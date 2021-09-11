@@ -2,25 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankShooter : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+public class TankShooter : MonoBehaviour
+{
+    private float thrust = 110.0f;
+    // Use this for initialization
+    void Start()
     {
-		
-	}
-
-    public void Shoot()
-    {
-        //Instantiate - this will create a new game object copied from a prefab
-        //fill object with data it needs
-        //object move forward on own
-        //object will detect collisions
+        GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
     }
 
 }

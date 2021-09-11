@@ -29,18 +29,14 @@ public class TankMover : MonoBehaviour
     {
         rb.MovePosition(rb.position + (-transform.forward * data.speed * Time.deltaTime));
     }
-    public void MoveLeft()
+    
+    public void RotateLeft()
     {
-        rb.MovePosition(rb.position + (-transform.right * data.speed * Time.deltaTime));
+        transform.Rotate(0, -data.turnSpeed * Time.deltaTime, 0);
     }
-    public void MoveRight()
+    public void RotateRight()
     {
-        rb.MovePosition(rb.position + (transform.right * data.speed * Time.deltaTime));
-    }
-
-    public void Rotate()
-    {
-        transform.Rotate(0, data.turnSpeed *Time.deltaTime, 0);
+        transform.Rotate(0, data.turnSpeed * Time.deltaTime, 0);
     }
 
 }

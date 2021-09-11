@@ -460,7 +460,7 @@ MonoBehaviour:
   mover: {fileID: 114581569969198562}
   shooter: {fileID: 114021524999840338}
   speed: 3
-  turnSpeed: 0
+  turnSpeed: 80
 --- !u!114 &114581569969198562
 MonoBehaviour:
   m_ObjectHideFlags: 1

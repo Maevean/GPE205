@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputController : Controller
 {
-    public enum ControlType{ WASD, IJKL };
+    public enum ControlType{ WASD };
     public ControlType controls;
 
 
@@ -32,21 +32,18 @@ public class InputController : Controller
             if (Input.GetKey(KeyCode.A))
             {
                 //Backward movement
-                pawn.mover.MoveLeft();
+                pawn.mover.RotateLeft();
             }
             if (Input.GetKey(KeyCode.D))
             {
                 //Backward movement
-                pawn.mover.MoveRight();
+                pawn.mover.RotateRight();
             }
-
-            //TO DO all other keys when using WASD
-        } else
-        {
-            if (controls == ControlType.IJKL)
             {
-
+                //Backward movement
+                
             }
-        }
+            //TO DO all other keys when using WASD
+        } 
 	}
 }
