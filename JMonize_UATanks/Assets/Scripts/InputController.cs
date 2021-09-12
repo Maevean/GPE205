@@ -8,6 +8,7 @@ public class InputController : Controller
     public ControlType controls;
 
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -43,7 +44,7 @@ public class InputController : Controller
                 //Backward movement
                 
             }
-            //TO DO all other keys when using WASD
+         
         } 
 	}
 }

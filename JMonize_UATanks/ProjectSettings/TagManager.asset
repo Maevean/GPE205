@@ -6,6 +6,9 @@ TagManager:
   tags:
   - PlayerBullet
   - obstacle
+  - Enemy
+  - BlueTank
+  - PinkTank
   layers:
   - Default
   - TransparentFX

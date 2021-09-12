@@ -16,7 +16,7 @@ public class TankMover : MonoBehaviour
 		
 	}
 	
-	// Update is called once per frame
+	// Moving speed and direction
 	void Update () {
 		
 	}

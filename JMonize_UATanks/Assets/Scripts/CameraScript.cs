@@ -12,6 +12,7 @@ public class CameraScript : MonoBehaviour
     {
         //Searching for tag "Player"
         player = GameObject.FindGameObjectWithTag("Player");
+
 	}
 	
 	// Update is called once per frame
