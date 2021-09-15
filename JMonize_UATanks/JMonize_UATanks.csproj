@@ -292,6 +292,8 @@
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\InputController.cs" />
+    <Compile Include="Assets\Scripts\SampleAIControl.cs" />
+    <Compile Include="Assets\Scripts\SimpletonManager.cs" />
     <Compile Include="Assets\Scripts\TankData.cs" />
     <Compile Include="Assets\Scripts\TankMover.cs" />
     <Compile Include="Assets\Scripts\TankShooter.cs" />

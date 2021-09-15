@@ -300,7 +300,7 @@ Prefab:
     - target: {fileID: 54088187267232124, guid: 295ae874c0dac9541b79ad1f3357c849,
         type: 2}
       propertyPath: m_Mass
-      value: 250
+      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 54088187267232124, guid: 295ae874c0dac9541b79ad1f3357c849,
         type: 2}
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1745014460367610, guid: 00b63ce38c1f2464e9b71ef675a4c63a, type: 2}
-  timerDelay: 1
+  ShotTimer: 0
 --- !u!114 &458507355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1745014460367610, guid: 00b63ce38c1f2464e9b71ef675a4c63a, type: 2}
-  timerDelay: 1
+  ShotTimer: 1
 --- !u!114 &718398782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1745014460367610, guid: 00b63ce38c1f2464e9b71ef675a4c63a, type: 2}
-  timerDelay: 1
+  ShotTimer: 0
 --- !u!114 &1502935007
 MonoBehaviour:
   m_ObjectHideFlags: 0

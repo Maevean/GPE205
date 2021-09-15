@@ -12,6 +12,7 @@ public class BulletTimeout : MonoBehaviour {
         //Timing out bullet in case of non collision.
         timer += Time.deltaTime;
 
+
         if (timer > bulletTimer)
         {
             Destroy(gameObject);

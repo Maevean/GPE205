@@ -6,36 +6,45 @@ public class BulletSpawn : MonoBehaviour
 {
     //Variables
     public GameObject Bullet;
-    public float timerDelay = 1.0f;
-    private float lastEventTime;
+    //Between Shots Timer
+    public float ShotTimer =1.0f;
+    //Shot Countdown Timer
+    private float sCountDown;
 
 
     // Update is called once per frame
     void Start()
     {
         //time delay
-        lastEventTime = timerDelay;
+        sCountDown = Time.time;
     }
 
-    void Update()
+   void Update()
 
-    {
-
-
+        
+         {
+       
+        if (Input.GetButtonDown("Jump") && Time.time >= sCountDown + ShotTimer)
+        {
+            
+            Shoot();
+            sCountDown = Time.time;
+        }
         //Using "jump" (spacebar) to fire
-        if (Input.GetButtonDown("Jump"))
+        /*if (Input.GetButtonDown("Jump")) 
         {
             Instantiate(Bullet, transform.position, transform.rotation);
 
-        }
+        }*/
+
         //shoot delay
-        lastEventTime -= Time.deltaTime;
-        if (lastEventTime <= 0)
-        {
-            Debug.Log("Not Ready Yet");
-            lastEventTime = timerDelay;
-        }
 
 
     }
+
+    void Shoot()
+    {
+            Instantiate(Bullet, transform.position, transform.rotation);
+    }
+
 }

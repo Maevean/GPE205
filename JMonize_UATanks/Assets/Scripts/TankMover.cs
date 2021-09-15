@@ -15,9 +15,11 @@ public class TankMover : MonoBehaviour
         data = this.gameObject.GetComponent<TankData>();
 		
 	}
-	
-	// Moving speed and direction
-	void Update () {
+
+    // Moving speed and direction
+    
+
+    void Update () {
 		
 	}
 
@@ -39,4 +41,5 @@ public class TankMover : MonoBehaviour
         transform.Rotate(0, data.turnSpeed * Time.deltaTime, 0);
     }
 
+ 
 }
