@@ -23,25 +23,17 @@ public class BulletSpawn : MonoBehaviour
 
         
          {
-       
+       //If time is ready on the next Jump press, shoot.
         if (Input.GetButtonDown("Jump") && Time.time >= sCountDown + ShotTimer)
         {
-            
+            //call on shoot function and reset
             Shoot();
             sCountDown = Time.time;
         }
-        //Using "jump" (spacebar) to fire
-        /*if (Input.GetButtonDown("Jump")) 
-        {
-            Instantiate(Bullet, transform.position, transform.rotation);
-
-        }*/
-
-        //shoot delay
-
+      
 
     }
-
+    //shoot function
     void Shoot()
     {
             Instantiate(Bullet, transform.position, transform.rotation);

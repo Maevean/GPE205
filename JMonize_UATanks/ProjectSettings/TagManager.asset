@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - BlueTank
   - PinkTank
+  - Waypoint
   layers:
   - Default
   - TransparentFX

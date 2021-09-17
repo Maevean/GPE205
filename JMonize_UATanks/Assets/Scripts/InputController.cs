@@ -10,8 +10,10 @@ public class InputController : Controller
 
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        //Adding me to list of players
+        GameManager.instance.players.Add(this);
 	}
 	
 	// Update is called once per frame
@@ -47,4 +49,8 @@ public class InputController : Controller
          
         } 
 	}
+    public void OnDestroy()
+    {
+        GameManager.instance.players.Remove(this);
+    }
 }

@@ -283,6 +283,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AIcontroller.cs" />
+    <Compile Include="Assets\Scripts\AIguard.cs" />
     <Compile Include="Assets\Scripts\BulletSpawn.cs" />
     <Compile Include="Assets\Scripts\BulletTimeout.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
@@ -291,10 +293,12 @@
     <Compile Include="Assets\Scripts\Enemies.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\InputController.cs" />
     <Compile Include="Assets\Scripts\SampleAIControl.cs" />
     <Compile Include="Assets\Scripts\SimpletonManager.cs" />
     <Compile Include="Assets\Scripts\TankData.cs" />
+    <Compile Include="Assets\Scripts\TankHealth.cs" />
     <Compile Include="Assets\Scripts\TankMover.cs" />
     <Compile Include="Assets\Scripts\TankShooter.cs" />
   </ItemGroup>
