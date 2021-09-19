@@ -22,28 +22,22 @@ public class TankMover : MonoBehaviour
 		
 	}
 
-    // Moving speed and direction
-    
-
-    void Update () {
-		
-	}
-    //Moving Forwards and speed
+    // Moving speed and direction frames per second
     public void MoveForward()
     {
-        rb.MovePosition(rb.position + (transform.forward * data.speed * Time.deltaTime) );
+        data.rb.MovePosition(data.rb.position + (transform.forward * data.speed * Time.deltaTime));
     }
-    //Moving Backwards and speed
+    //Moving Backwards and speed frames per second
     public void MoveBackward()
     {
-        rb.MovePosition(rb.position + (-transform.forward * data.speed * Time.deltaTime));
+        data.rb.MovePosition(data.rb.position + (-transform.forward * data.speed * Time.deltaTime));
     }
-    //Rotation Left and speed
+    //Rotation Left and speed frames per second
     public void RotateLeft()
     {
         transform.Rotate(0, -data.turnSpeed * Time.deltaTime, 0);
     }
-    //Rotation Right and speed
+    //Rotation Right and speed frames per second
     public void RotateRight()
     {
         transform.Rotate(0, data.turnSpeed * Time.deltaTime, 0);
@@ -53,4 +47,10 @@ public class TankMover : MonoBehaviour
     {
         //TODO Vector3 rotate towards object might go in tank data instead
     }
+
+    void Update ()
+    {
+		
+	}
+   
 }

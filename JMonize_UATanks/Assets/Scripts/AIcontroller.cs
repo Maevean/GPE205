@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class AIcontroller : Controller
 
-//!!!!!!!!! WATCH VIDEO ON TEACH MAKING MOVEMENT FOR MOVE() !!!!!!!!!
-//!!!!!!!!! WATCH VIDEO ON TEACH MAKING MOVEMENT FOR MOVE() !!!!!!!!!
-//!!!!!!!!! WATCH VIDEO ON TEACH MAKING MOVEMENT FOR MOVE() !!!!!!!!!
-//!!!!!!!!! WATCH VIDEO ON TEACH MAKING MOVEMENT FOR MOVE() !!!!!!!!!
-//!!!!!!!!! WATCH VIDEO ON TEACH MAKING MOVEMENT FOR MOVE() !!!!!!!!!
 
 {
     //AI Movement types
-    public enum AItypes { Idle, Chase, StopAndShoot, ChaseShoot, Flee};
+    public enum AItypes { Idle, Chase, StopAndShoot, ChaseShoot, Flee, Patrol };
     //Selecting the Current AI type
     public AItypes currentType;
     //when this close to player
-    public float closeness = 1;
+    public float closeness = 5;
     //pulling from TankData data
     private TankData data;
     //Pulling from TankMover mover
     private TankMover mover;
     public float timeEnteredCurrentType;
+    public Transform[] waypoints;
+    private int currentWaypoint = 0;
+    private Transform tf;
+    public float fleeDistance = 3;
+
+
+
 
     public void ChangeType (AItypes newType)
     {
@@ -41,32 +43,48 @@ public class AIcontroller : Controller
     public void DoChase ()
     {
         
+        //Turn towards the player
+        TurnToPlayer();
+        //Moving Forward 
+        pawn.mover.MoveForward();
+        //Do chase "player"
+        
+    }
+    //Stop and Shoot Movement
+    public void DoStopAndShoot ()
+    {
+            TurnToPlayer();
+       //GetComponent<TankShooter>();//is this how to pull from TankShooter?
+        
+            
+    }
+
+    public void DoChaseAndShoot ()
+    {
         //Do Turn towards player
         TurnToPlayer();
         //Moving Forward 
         pawn.mover.MoveForward();
         //Do chase "player"
+        //Shoot?
     }
 
-    public void DoStopAndShoot ()
+    public void DoFlee()
     {
-        //TODO Stop and shoot
-    }
-
-    public void DoChaseAndShoot ()
-    {
-        //rotate to target
-        // mover.RotateTowards(target.position, data.turnSpeed);
-    }
-
-    public void DoFlee ()
-    {
-        // TODO chase this invisible placed object
-        //TODO turn towards flee point
+        TurnTowards(GameObject.FindWithTag("Waypoint"));
+        pawn.mover.MoveForward();
         //TODO move towards flee point
     }
 
-   public void TurnTowards (Vector3 position)
+    public void DoPatrol()
+    {
+
+        TurnTowards(GameObject.FindWithTag("Waypoint3"));
+        pawn.mover.MoveForward();
+
+    }
+
+    public void TurnTowards (Vector3 position)
     {
         //Find Vector that points from this object to the position
         Vector3 vectorToTarget = position - pawn.transform.position;
@@ -94,6 +112,7 @@ public class AIcontroller : Controller
     {
         TurnTowards(targetObject.transform);
     }
+
     public bool TankClose (TankData tankCheck)
     {
         //Definition of close
@@ -119,4 +138,25 @@ public class AIcontroller : Controller
             return false;
         }
     }
+
+   /*/ Sees if we can move
+    public bool CanMove(float speed)
+    {
+        //Sends out forwards
+        RaycastHit hit;
+
+        // If it hits
+        if (Physics.Raycast(tf.position, tf.forward, out hit, speed))
+        {
+            //If it is not a player hit
+            if (!hit.collider.CompareTag("Player"))
+            {
+               
+                return false;
+            }
+        }
+      
+        return true;
+    }*/
+
 }

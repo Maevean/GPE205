@@ -10,6 +10,8 @@ TagManager:
   - BlueTank
   - PinkTank
   - Waypoint
+  - Waypoint2
+  - Waypoint3
   layers:
   - Default
   - TransparentFX

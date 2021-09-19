@@ -13,8 +13,8 @@ public class AIguard : AIcontroller
 
     void Update()
     {
-    //if in idle state
-        if (currentType ==AItypes.Idle)
+ //if in Chase state
+        if (currentType == AItypes.Chase)
         {
             DoIdle();
 
@@ -29,39 +29,76 @@ public class AIguard : AIcontroller
             DoChase();
             //check for transition     
             
-            if (CurrentTypeIsGreaterThan (4))
+            if (CurrentTypeIsGreaterThan (3))
             {
                 ChangeType(AItypes.Idle);
             }
         }
 
-       /* if (currentType == AItypes.Chase)
-        {     
-            DoChase();
-            //TODO changestate: if no longer close do idle
-        }
-
-        if (currentType == AItypes.ChaseShoot)
+ //if in idle state
+        if (currentType == AItypes.Idle)
         {
-            DoChaseAndShoot();
+            DoIdle();
+
+           //do nothing
+
         }
 
+  //If in Flee
         if (currentType == AItypes.Flee)
         {
-            DoFlee();      
-        }
-
-        if (currentType == AItypes.StopAndShoot)
-        {
-            DoStopAndShoot();
+            DoFlee();
+        
+         if (CurrentTypeIsGreaterThan(3))
+        
+            ChangeType(AItypes.Idle);
+ 
         }
         
-        //check for transitions
+ //If in stop Shoot
+        if (currentType == AItypes.StopAndShoot)
+        {
+            DoChase();
+            if (TankClose(GameManager.instance.players[0].pawn))
+            {
+                ChangeType(AItypes.StopAndShoot);
+            }
+        }
 
-    //else if i am in chase
-        //do action for idle state
-        //check for transitions*/
+        
+ //If in Chase and Shoot
+        if (currentType == AItypes.ChaseShoot)
+        {
+            DoIdle();
+
+            if (TankClose(GameManager.instance.players[0].pawn))
+            {
+                ChangeType(AItypes.ChaseShoot);
+            }
+            //check for transition     
+
+            if (CurrentTypeIsGreaterThan(3))
+            {
+                ChangeType(AItypes.Idle);
+            }
+        }
+ //if in Patrol
+        if (currentType == AItypes.Patrol)
+        {
+            DoPatrol();
+
+            if (TankClose(GameManager.instance.players[0].pawn))
+            {
+                ChangeType(AItypes.Chase);
+            }
+
+            if (CurrentTypeIsGreaterThan(3))
+            {
+                ChangeType(AItypes.Patrol);
+            }
+        }
     }
-
-
 }
+
+
+

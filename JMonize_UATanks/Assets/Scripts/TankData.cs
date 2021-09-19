@@ -10,11 +10,12 @@ public class TankData : MonoBehaviour
     //In Game Tank Variables
     public float speed;
     public float turnSpeed;
-    //The Max Total Health
-    public float totalHealth = 100;
-    //Current Health
-    public float CurrentHealth = 100;
-    
+    public float ShotTimer; //times between shots
+    public float bulletTimer = 3f; //the life of bullets
+    public float damageTaken = 1;
+    public float totalHealth = 100; //The Max Total Health
+    public float CurrentHealth = 100; //Current Health
+
 
     //NEW*** Bullet Prefab
     public GameObject pfBullet;
