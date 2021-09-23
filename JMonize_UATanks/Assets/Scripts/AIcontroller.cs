@@ -23,7 +23,7 @@ public class AIcontroller : Controller
     public float fleeDistance = 3;
 
 
-
+  
 
     public void ChangeType (AItypes newType)
     {
@@ -54,7 +54,8 @@ public class AIcontroller : Controller
     public void DoStopAndShoot ()
     {
             TurnToPlayer();
-       //GetComponent<TankShooter>();//is this how to pull from TankShooter?
+           
+       GetComponent<TankShooter>();//is this how to pull from TankShooter?
         
             
     }
@@ -139,7 +140,7 @@ public class AIcontroller : Controller
         }
     }
 
-   /*/ Sees if we can move
+   // Sees if we can move
     public bool CanMove(float speed)
     {
         //Sends out forwards
@@ -157,6 +158,6 @@ public class AIcontroller : Controller
         }
       
         return true;
-    }*/
+    }
 
 }

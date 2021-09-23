@@ -24,9 +24,11 @@ public class TankData : MonoBehaviour
 
     public Rigidbody rb;
     public TankHealth health;
+    public Transform tf;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+
+    void Start ()
     {
 
         GameManager.instance.tanks.Add(this);
@@ -38,17 +40,17 @@ public class TankData : MonoBehaviour
         shooter = this.gameObject.GetComponent<TankShooter>();
         health = GetComponent<TankHealth>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
 
     private void OnDestroy()
     {
         //remove me from list
         GameManager.instance.tanks.Remove(this);
     }
+
+ 
+
 
 
 }

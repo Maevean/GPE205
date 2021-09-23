@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 75
+  controlID: 47
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 35
+  controlID: 48
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 107
+  controlID: 49
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -369,10 +369,10 @@ MonoBehaviour:
   m_LastProjectPath: C:\Users\jessm\Documents\JMonize_UATanks
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: 56280000
-    m_LastClickedID: 10326
-    m_ExpandedIDs: 000000007c270000c0270000c627000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 5a280000
+    m_LastClickedID: 10330
+    m_ExpandedIDs: 0000000080270000c427000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -400,7 +400,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c270000c0270000c6270000
+    m_ExpandedIDs: 0000000080270000c4270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -518,9 +518,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a070000
+    m_SelectedIDs: f6060000
     m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff000000002e2a0000
+    m_ExpandedIDs: 82d3ffffd6d7ffff08f5ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -576,9 +576,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -13.230561, y: -3.611239, z: -79.52557}
+    m_Target: {x: -61.113365, y: -23.528929, z: -42.269253}
     speed: 2
-    m_Value: {x: -13.230561, y: -3.611239, z: -79.52557}
+    m_Value: {x: -61.113365, y: -23.528929, z: -42.269253}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -602,13 +602,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.0053675342, y: 0.9916858, z: -0.04406227, w: -0.12078517}
+    m_Target: {x: -0.072380304, y: 0.8773897, z: -0.14015463, w: -0.45310608}
     speed: 2
-    m_Value: {x: -0.0053675342, y: 0.9916858, z: -0.04406227, w: -0.12078517}
+    m_Value: {x: -0.072380304, y: 0.8773897, z: -0.14015463, w: -0.45310608}
   m_Size:
-    m_Target: 89.37951
+    m_Target: 92.64732
     speed: 2
-    m_Value: 89.37951
+    m_Value: 92.64732
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -719,8 +719,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 674
-    width: 685
-    height: 343
+    x: 0
+    y: 672
+    width: 1366
+    height: 346
   m_PersistentViewDataDictionary: {fileID: 0}

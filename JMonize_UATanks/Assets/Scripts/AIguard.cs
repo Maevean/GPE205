@@ -16,22 +16,21 @@ public class AIguard : AIcontroller
  //if in Chase state
         if (currentType == AItypes.Chase)
         {
-            DoIdle();
+            DoChase();
 
+            if (CurrentTypeIsGreaterThan(3))          
+            {
+                ChangeType(AItypes.Idle);
+            }
+              
+        }
+        else if (currentType == AItypes.Idle)
+        {
+            //check for transition     
+            
             if (TankClose(GameManager.instance.players[0].pawn))
             {
                 ChangeType(AItypes.Chase);
-            }
-            
-        }
-        else if (currentType == AItypes.Chase)
-        {
-            DoChase();
-            //check for transition     
-            
-            if (CurrentTypeIsGreaterThan (3))
-            {
-                ChangeType(AItypes.Idle);
             }
         }
 
@@ -58,10 +57,10 @@ public class AIguard : AIcontroller
  //If in stop Shoot
         if (currentType == AItypes.StopAndShoot)
         {
-            DoChase();
+            DoStopAndShoot();
             if (TankClose(GameManager.instance.players[0].pawn))
             {
-                ChangeType(AItypes.StopAndShoot);
+                ChangeType(AItypes.Chase);
             }
         }
 
@@ -69,15 +68,15 @@ public class AIguard : AIcontroller
  //If in Chase and Shoot
         if (currentType == AItypes.ChaseShoot)
         {
-            DoIdle();
+            DoChaseAndShoot();
 
             if (TankClose(GameManager.instance.players[0].pawn))
             {
-                ChangeType(AItypes.ChaseShoot);
+                ChangeType(AItypes.StopAndShoot);
             }
             //check for transition     
 
-            if (CurrentTypeIsGreaterThan(3))
+           else if (CurrentTypeIsGreaterThan(3))
             {
                 ChangeType(AItypes.Idle);
             }
@@ -92,7 +91,7 @@ public class AIguard : AIcontroller
                 ChangeType(AItypes.Chase);
             }
 
-            if (CurrentTypeIsGreaterThan(3))
+           else if (CurrentTypeIsGreaterThan(3))
             {
                 ChangeType(AItypes.Patrol);
             }

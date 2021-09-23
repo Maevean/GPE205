@@ -7,10 +7,14 @@ public class TankMover : MonoBehaviour
     //New *** 
     private TankData data;
     public Rigidbody rb;
+    
     //public TankData data;
 
-	// Use this for initialization
-	void Start ()
+
+
+
+    // Use this for initialization
+    void Start ()
     {
         //NEW*****
         data = GetComponent<TankData>();

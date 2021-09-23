@@ -40,6 +40,6 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         //Remove me from list
-       //GameManager.instance.tanks.Remove(this);       
+      //GameManager.instance.tanks.Remove(this);       
     }
 }
