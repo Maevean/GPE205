@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 767324086}
   - component: {fileID: 767324085}
   - component: {fileID: 767324084}
+  - component: {fileID: 767324088}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -381,6 +382,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &767324088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 767324083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3ddaef0ef926040b3a967bdefc5aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - speedModifier: 0
+    healthModifier: 0
+    maxHealthModifier: 0
+    fireRateModifier: 0
+    duration: 0
+    isPermanent: 0
+  - speedModifier: 0
+    healthModifier: 0
+    maxHealthModifier: 0
+    fireRateModifier: 0
+    duration: 0
+    isPermanent: 0
+  - speedModifier: 0
+    healthModifier: 0
+    maxHealthModifier: 0
+    fireRateModifier: 0
+    duration: 0
+    isPermanent: 0
 --- !u!1 &970363976 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1004793745103626, guid: 295ae874c0dac9541b79ad1f3357c849,
