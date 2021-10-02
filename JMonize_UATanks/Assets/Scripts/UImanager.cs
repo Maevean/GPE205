@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class UImanager : MonoBehaviour
 {
 
@@ -13,6 +14,16 @@ public class UImanager : MonoBehaviour
     {
         myTextBox.text = "UATanks";
         myTextBox.color = Color.cyan;
+
+        if (!PlayerPrefs.HasKey("MusicVolume"))
+        {
+            PlayerPrefs.SetFloat("MusicVolume", 1);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
     }
 
     // Update is called once per frame
@@ -44,7 +55,27 @@ public class UImanager : MonoBehaviour
         //TODO
     }
 
-    public float MusicVolume;
+    //public AudioSource
+    [SerializeField] Slider VolumeSlide;
+
+
+
+    public void VolumeChange()
+    {
+        AudioListener.volume = VolumeSlide.value;
+        Save();
+    }
+    
+    private void Load()
+    {
+        VolumeSlide.value = PlayerPrefs.GetFloat("MusicVolume");
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetFloat("MusicVolume", VolumeSlide.value);
+    }
+    /*public float MusicVolume;
 
     public void IncreaseMusicVol()
     {
@@ -54,6 +85,6 @@ public class UImanager : MonoBehaviour
     public void LowerMusicVol()
     {
         MusicVolume--;
-    }
+    }*/
 
 }
