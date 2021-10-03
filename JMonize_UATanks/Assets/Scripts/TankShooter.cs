@@ -11,6 +11,8 @@ public class TankShooter : MonoBehaviour
     private float sCountDown;
     public Transform fireSpot;
 
+    private AudioSource shootingSound;
+
 
     // Use this for initialization
     void Start()
@@ -20,6 +22,9 @@ public class TankShooter : MonoBehaviour
         //TankData Load and shot time
         data = GetComponent<TankData>();
         sCountDown = data.ShotTimer;
+
+        //grabbing shooting sounds
+        shootingSound = GetComponent<AudioSource>();
     }
     public void Update()
     {
@@ -43,7 +48,9 @@ public class TankShooter : MonoBehaviour
             Rigidbody bulletsRB = theBullet.GetComponent<Rigidbody>();
             bulletsRB.AddForce(fireSpot.forward * data.bulletForce);
 
-            sCountDown = data.ShotTimer; 
+            sCountDown = data.ShotTimer;
+
+            shootingSound.PlayOneShot(shootingSound.clip);
         }
 
     }

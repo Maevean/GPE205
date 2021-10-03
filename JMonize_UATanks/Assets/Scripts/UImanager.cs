@@ -12,9 +12,11 @@ public class UImanager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //changing text and color
         myTextBox.text = "UATanks";
         myTextBox.color = Color.cyan;
 
+        //Music volume settings
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 1);
@@ -32,17 +34,20 @@ public class UImanager : MonoBehaviour
 
     }
 
+    //Change Text Function
     public void ChangeText()
     {
         myTextBox.text = "UATanks Game";
     }
 
+    //Quit Game Function
     public void QuitGame()
     {
     Application.Quit();
         Debug.Log("Quit");
      }
 
+    //Start Game Function
     public void StartGame()
     {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
@@ -59,13 +64,14 @@ public class UImanager : MonoBehaviour
     [SerializeField] Slider VolumeSlide;
 
 
-
+    //Volume Slider Functions
     public void VolumeChange()
     {
         AudioListener.volume = VolumeSlide.value;
         Save();
     }
     
+    //Player Music Prefs
     private void Load()
     {
         VolumeSlide.value = PlayerPrefs.GetFloat("MusicVolume");
@@ -75,7 +81,9 @@ public class UImanager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MusicVolume", VolumeSlide.value);
     }
-    /*public float MusicVolume;
+    /*
+     * Use for SFX?
+     * public float MusicVolume;
 
     public void IncreaseMusicVol()
     {
