@@ -23,8 +23,7 @@ public class MapGenerator : MonoBehaviour
         // Use this for initialization
         void Start()
         {
-            // Generate Grid
-            GenerateGrid();
+         
         //Generate chosen map seed
 
             if (isMapSeed)
@@ -39,6 +38,9 @@ public class MapGenerator : MonoBehaviour
              {
             mapSeed = DateToInt(DateTime.Now.Date);
              }
+
+        // Generate Grid
+            GenerateGrid();
         }
 
         public void GenerateGrid()
