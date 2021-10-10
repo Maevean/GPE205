@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //Save me to Game Manager
-        //GameManager.instance.tanks.Add(this); 
+        /*This is not working 
+         * GameManager.instance.tanks.Add(this);*/
     }
 
     // Update is called once per frame
@@ -38,42 +39,47 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+
     private void OnDestroy()
     {
         //Remove me from list
-        //GameManager.instance.tanks.Remove(this);       
+        /*This is not working right
+         * GameManager.instance.tanks.Remove(this); */      
     }
+
+    /*This is not working right
+    public InputController SpawnPlayer()
+ {
+     //Spawn player and return
+     InputController newPlayerController;
+     return newPlayerController;
+ }
 
     public void BeginTwoPlayerGame()
     {
         //Do All stuff for two player game
         //Gen Map
         GenerateMap();
+
         //Spawn 1 player
+        player1 = SpawnPlayer();
 
-        //player1 = SpawnPlayer();
         //Spawn 2 player
+        player2 = SpawnPlayer();
 
-        //player2 = SpawnPlayer();
-
-        //Spawn Enemy
-        SpawnEnemy();
-    }
+        
+    }*/
 
     public void SpawnEnemy()
     {
-
+         //Spawn Enemy
+         SpawnEnemy();
     }
 
-    /*public InputController SpawnPlayer()
-    {
-        //Spawn player and return
-        InputController newPlayerController;
+ 
 
-         return newPlayerController;
-    }*/
-
-    public void GenerateMap()
+        public void GenerateMap()
     {
 
     }

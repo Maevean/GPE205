@@ -42,9 +42,9 @@ public class AIcontroller : Controller
 
     public void DoChase ()
     {
-        
+
         //Turn towards the player
-        TurnToPlayer();
+        TurnTowards(GameObject.FindWithTag("Player"));
         //Moving Forward 
         pawn.mover.MoveForward();
         //Do chase "player"
@@ -54,9 +54,9 @@ public class AIcontroller : Controller
     public void DoStopAndShoot ()
     {
             TurnToPlayer();
-           
-       GetComponent<TankShooter>();//is this how to pull from TankShooter?
-        
+        //pawn shoot
+        pawn.shooter.Shoot();
+
             
     }
 
@@ -64,6 +64,8 @@ public class AIcontroller : Controller
     {
         //Do Turn towards player
         TurnToPlayer();
+        //pawn shoot
+        pawn.shooter.Shoot();
         //Moving Forward 
         pawn.mover.MoveForward();
         //Do chase "player"

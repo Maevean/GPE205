@@ -21,27 +21,29 @@ public class MapGenerator : MonoBehaviour
         
 
         // Use this for initialization
-        void Start()
-        {
-         
+ 
+
+
+        public void GenerateMap()
+    {
         //Generate chosen map seed
 
-            if (isMapSeed)
-            {
+        if (isMapSeed)
+        {
             UnityEngine.Random.InitState(mapSeed);
-            }
-            if (isRandom)
-            {
+        }
+        if (isRandom)
+        {
             UnityEngine.Random.InitState(DateToInt(DateTime.Now));
-            }
-             if (isMapOfTheDay)
-             {
+        }
+        if (isMapOfTheDay)
+        {
             mapSeed = DateToInt(DateTime.Now.Date);
-             }
+        }
 
         // Generate Grid
-            GenerateGrid();
-        }
+        GenerateGrid();
+    }
 
         public void GenerateGrid()
         {

@@ -46,13 +46,13 @@ public class PickUp : MonoBehaviour
 	void Update ()
     {
         // If it is there is nothing spawns
-      /*  if (spawnedPickup == null)
+        if (tf == null)
         {
             // And it is time to spawn
             if (Time.time > nextSpawnTime)
             {
                 // Spawn it and set the next time
-                spawnedPickup = Instantiate(pickupPrefab, tf.position, Quaternion.identity) as GameObject;
+                //tf = Instantiate(pickupPrefab, tf.position, Quaternion.identity) as GameObject;
                 nextSpawnTime = Time.time + DelaySpawn;
             }
         }
@@ -60,6 +60,6 @@ public class PickUp : MonoBehaviour
         {
             // Otherwise, the object still exists, so postpone the spawn
             nextSpawnTime = Time.time + DelaySpawn;
-        }*/
+        }
     }
 }

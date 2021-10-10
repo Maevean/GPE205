@@ -52,9 +52,6 @@ public class TankMover : MonoBehaviour
         //TODO Vector3 rotate towards object might go in tank data instead
     }
 
-    void Update ()
-    {
-		
-	}
+    
    
 }

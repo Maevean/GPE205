@@ -55,10 +55,7 @@ public class UImanager : MonoBehaviour
 
 
 
-    public void Options()
-    {
-        //TODO
-    }
+
 
     //public AudioSource
     [SerializeField] Slider VolumeSlide;
@@ -81,18 +78,18 @@ public class UImanager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MusicVolume", VolumeSlide.value);
     }
-    /*
-     * Use for SFX?
-     * public float MusicVolume;
+   
+    //Sound Effects volume
+     public float SFXVolume;
 
-    public void IncreaseMusicVol()
+    public void IncreaseSFXVol()
     {
-        MusicVolume++;
+        SFXVolume++;
     }
 
-    public void LowerMusicVol()
+    public void LowerSFXVol()
     {
-        MusicVolume--;
-    }*/
+        SFXVolume--;
+    }
 
 }
