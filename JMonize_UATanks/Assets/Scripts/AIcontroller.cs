@@ -63,7 +63,7 @@ public class AIcontroller : Controller
     public void DoChaseAndShoot ()
     {
         //Do Turn towards player
-        TurnToPlayer();
+        TurnTowards(GameObject.FindWithTag("Player"));
         //pawn shoot
         pawn.shooter.Shoot();
         //Moving Forward 
